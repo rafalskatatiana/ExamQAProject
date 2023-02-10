@@ -1,7 +1,8 @@
 class ThingsPageConst:
     """Stores constants related to hello page"""
 
-    THINGS_PAGE_URL = "https://www.saucedemo.com/inventory.html"
+    THINGS_PAGE_XPATH = ".//span[@class='title'][text()='Products']"
+    THINGS_PAGE_TEXT = "PRODUCTS"
 
     # Things Page
     ADD_TO_CART_XPATH = ".//button[@id='add-to-cart-sauce-labs-backpack']"
