@@ -32,6 +32,7 @@ class TestThingsPage:
                    - Steps:
                        - Log in as user
                        - Click on cart button
+                       - Verify cart page name
                """
         # Log in as a user
         things_page = start_page.log_in("standard_user", "secret_sauce")

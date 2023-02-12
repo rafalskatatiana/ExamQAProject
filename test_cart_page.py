@@ -1,11 +1,9 @@
 import logging
 from time import sleep
 
-from pages import cart_page
-
 
 class TestCartPage:
-    """Stores tests for start cart base functionality"""
+    """Stores tests for cart page base functionality"""
     log = logging.getLogger("[CartPage]")
 
     def test_verify_cart_name_page(self, start_page):
