@@ -20,3 +20,4 @@ class CartPage(BasePage):
         assert self.compare_element_text(xpath=self.const.CART_PAGE_NAME_XPATH, text=self.const.CART_PAGE_NAME_TEXT)
         self.log.info("User routed to login page")
         sleep(2)
+
