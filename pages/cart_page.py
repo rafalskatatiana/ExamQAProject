@@ -4,7 +4,6 @@ from time import sleep
 from constsnts.cart_page import CartPageConsts
 from pages.base_page import BasePage
 from pages.header import Header
-from pages.start_page import StartPage
 
 
 class CartPage(BasePage):
@@ -12,7 +11,6 @@ class CartPage(BasePage):
 
     def __init__(self, driver):
         super().__init__(driver)
-        self.const = StartPage
         self.const = CartPageConsts
         self.header = Header(self.driver)
         self.log = logging.getLogger("[ThingsPage]")

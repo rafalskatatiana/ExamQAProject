@@ -8,7 +8,7 @@ from pages.start_page import StartPage
 
 
 class ThingsPage(BasePage):
-    """Stores methods describes hello page actions"""
+    """Stores methods describes things page actions"""
 
     def __init__(self, driver):
         super().__init__(driver)
