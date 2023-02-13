@@ -15,7 +15,7 @@ class SideMenu(BasePage):
         self.const = StartPage
         self.const = SideMenuConsts
         self.header = Header(self.driver)
-        self.log = logging.getLogger("[ThingsPage]")
+        self.log = logging.getLogger("[Side menu]")
 
     def log_out_by_side_menu(self):
         """Click on the button Log out from side menu"""
