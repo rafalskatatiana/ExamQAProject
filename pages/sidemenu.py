@@ -11,7 +11,7 @@ class SideMenu(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
         self.const = SideMenuConsts
-        self.header = Header(self.driver)
+        self.header = Header
         self.log = logging.getLogger("[Side menu]")
 
     def log_out_by_side_menu(self):

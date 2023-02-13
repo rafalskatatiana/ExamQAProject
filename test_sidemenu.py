@@ -1,8 +1,6 @@
 import logging
 from time import sleep
 
-from pages import sidemenu
-
 
 class TestSideMenu:
     """Stores tests for side menu base functionality"""
@@ -22,4 +20,5 @@ class TestSideMenu:
         sleep(2)
 
         # Click on Logout
-        sidemenu.log_out_by_side_menu()
+        things_page.header.side_menu.log_out_by_side_menu()
+        self.log.info("Button Logout was clicked")
