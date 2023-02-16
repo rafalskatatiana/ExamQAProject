@@ -13,6 +13,7 @@ class TestSideMenu:
                 - Login as a user
                 - Click on the icon side menu
                 -  Click on Logout
+                -Verify login page by login button
          """
 
         # Login as user
@@ -23,3 +24,6 @@ class TestSideMenu:
 
         # Click on Logout
         things_page.header.side_menu.log_out_by_side_menu()
+
+        # Verify login page by login button
+        start_page.verify_sign_in()

@@ -1,3 +1,4 @@
+from selenium.common import NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
@@ -43,3 +44,11 @@ class BasePage:
                 (by, xpath)
             )
         )
+
+    def is_element_exists(self, xpath):
+        """Check if element exists"""
+        try:
+            self.driver.find_element(by=By.XPATH, value=xpath)
+            return True
+        except(TimeoutError, NoSuchElementException):
+            return False

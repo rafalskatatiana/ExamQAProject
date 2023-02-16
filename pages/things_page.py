@@ -4,7 +4,7 @@ from constsnts.things_page import ThingsPageConst
 from pages.base_page import BasePage
 from pages.header import Header
 from pages.start_page import StartPage
-from pages.utils import log_wrapper
+from pages.utils import log_wrapper, wait_until_ok
 
 
 class ThingsPage(BasePage):
@@ -22,6 +22,7 @@ class ThingsPage(BasePage):
         """Verify that user is routed to login page"""
         assert self.compare_element_text(xpath=self.const.THINGS_PAGE_XPATH, text=self.const.THINGS_PAGE_TEXT)
 
+    @wait_until_ok(timeout=10, period=1)
     @log_wrapper
     def add_thing_to_box(self):
         """Click on the button Add to cart"""

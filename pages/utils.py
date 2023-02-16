@@ -10,7 +10,7 @@ def user_value():
     return User
 
 
-def wait_until_ok(timeout=10, period=0.5):
+def wait_until_ok(timeout=7, period=0.5):
     """Retires function until ok (or 5 seconds)"""
     log = logging.getLogger("[Wait until OK]")
 

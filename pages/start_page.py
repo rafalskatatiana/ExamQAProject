@@ -31,3 +31,8 @@ class StartPage(BasePage):
 
         from pages.things_page import ThingsPage
         return ThingsPage(self.driver)
+
+    @log_wrapper
+    def verify_sign_in(self):
+        """Verify login button in start page"""
+        assert self.is_element_exists(xpath=self.const.LOG_IN_BUTTON_XPATH)
