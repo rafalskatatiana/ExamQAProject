@@ -5,7 +5,7 @@ class TestStartPage:
     """Stores tests for start page base functionality"""
     log = logging.getLogger("[StartPage]")
 
-    def test_log_in_user(self, start_page):
+    def test_log_in_user(self, start_page, user):
         """
             - Pre-conditions:
                 - Open start page
@@ -13,12 +13,10 @@ class TestStartPage:
                 - Fill login
                 - Fill password
                 - Click on the button Login
-                - Verify login page
+                - Verify login page name
         """
         # Login as a user
-        things_page = start_page.log_in("standard_user", "secret_sauce")
-        self.log.info("User is logged")
+        things_page = start_page.log_in(user)
 
         # Check user to login page
         things_page.verify_name_page()
-        self.log.info("Page name is correct")

@@ -3,6 +3,7 @@ from selenium import webdriver
 
 from constsnts.base import BaseConstants
 from pages.start_page import StartPage
+from pages.values import User
 
 
 @pytest.fixture()
@@ -18,3 +19,9 @@ def start_page(driver):
     """Create start page object"""
     driver.get(BaseConstants.URL)
     return StartPage(driver)
+
+
+@pytest.fixture()
+def user():
+    """Create user value"""
+    return User()

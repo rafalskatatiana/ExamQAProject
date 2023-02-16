@@ -1,8 +1,8 @@
 import logging
-from time import sleep
 
 from constsnts.sidemenu import SideMenuConsts
 from pages.base_page import BasePage
+from pages.utils import log_wrapper
 
 
 class SideMenu(BasePage):
@@ -14,10 +14,10 @@ class SideMenu(BasePage):
 
         self.log = logging.getLogger("[Side menu]")
 
+    @log_wrapper
     def log_out_by_side_menu(self):
         """Click on the button Log out from side menu"""
         self.click(self.const.LOG_OUT_XPATH)
-        sleep(2)
 
         from pages.start_page import StartPage
         return StartPage(self.driver)
